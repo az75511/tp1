@@ -20,7 +20,11 @@ jobs:
       
     - name: Installer pandas et numpy 
       run: pip install --no-cache-dir -r requirements.txt
-  
+
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv venv
+        .\venv\Scripts\activate   # On Windows
        
     - name: executer un code python 
       run: sudo python app.py
