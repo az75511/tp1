@@ -17,7 +17,7 @@ jobs:
 
     - name: Installer pandas et numpy 
       run: pip install --no-cache-dir -r requirments.txt
-      run : pip install --upgrade pip
+      run: pip install --upgrade pip
        
     - name: executer un code python 
       run: sudo python app.py
