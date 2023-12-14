@@ -24,4 +24,4 @@ jobs:
         python -m pip install --no-cache-dir -r requirements.txt
 
     - name: Execute Python Code
-      run: python app.py
+      run: sudo python app.py
