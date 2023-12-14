@@ -20,4 +20,4 @@ jobs:
         pip install pandas numpy
 
     - name: executer un code python 
-      run: python -c "import pandas; print('pandas dispo')
+      run: python -c "import pandas; print('pandas dispo')"
