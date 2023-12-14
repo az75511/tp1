@@ -7,16 +7,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-          
-    
-    - name: install pip
-      run: pip install -r requirements.txt
-       
-    - name: executer un code python 
-      run: sudo python app.py
+        node-version: 16
+
+    - name: Upgrade pip
+      run: python -m pip install --upgrade pip
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --no-cache-dir -r requirements.txt
+
+    - name: Execute Python Code
+      run: python app.py
